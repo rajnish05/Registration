@@ -1,0 +1,20 @@
+.custom-container{
+  width:53%;
+ float:right;
+}
+.Image  {
+  width:600px; 
+  height:669px;
+}
+.btn.red {
+  box-shadow: none;
+  outline: none;
+  border-radius: 5px;
+}
+.btngreen{
+  background-color: green;
+  margin-left: 40%;
+}
+.homeContainer{
+padding: 60px 0 0 0;
+}
