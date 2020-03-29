@@ -8,8 +8,7 @@ class Register extends Component {
     constructor(props) {
         super(props)
         this.state ={
-            fName:'',
-            lName:'',
+            name:'',
             contact:'',
             email:'',
             password:'',
@@ -21,14 +20,14 @@ class Register extends Component {
     }
     handleSubmit = (event) =>{
         event.preventDefault()
+        console.log("eeeeeeeeeeeee",this.state)
         registerValidation(this.state)
         .then(res =>{
             console.log("register...",res)
             if(res == true){
                 this.setState({errors:""})
                 let payload = {
-                    fName : this.state.fName,
-                    lName : this.state.lName,
+                   name : this.state.name,
                     contact : this.state.contact,
                     email:this.state.email,
                     password: this.state.password
@@ -54,64 +53,56 @@ class Register extends Component {
     render() {
         const { errors } = this.state
         return (
-            <div className="">
-                <img className="Image" src="image/images.jpeg" ></img>
-
-                <div className="custom-container">
-                    <h2 align="center"> Registration</h2>
+            <div className = "background">
+            
+                    {/* <h2 align="center"> Registration</h2> */}
+                    <span>.</span>
+                    <div className="custom-container">
                     <form onSubmit = {this.handleSubmit} >
                                 <div class="row m-b-n">
+                                <span className="red-text">{errors.fName}</span>
+
                                     <input
                                         type="text"
-                                        className="form-control"
-                                        placeholder="Enter Your First Name"
-                                        id="fName"
+                                        className="form-control green-text"
+                                        placeholder="Enter Your Name"
+                                        id="name"
                                          onChange = {this.handleChange}
-
-                                    />
-                                    <span className="red-text">{errors.fName}</span>
-
+                                         />
+                                  
                                     <input
                                         type="text"
-                                        className="form-control"
-                                        placeholder="Enter Your Last Name"
-                                        id="lName"
-                                        onChange = {this.handleChange}
-                                    />
-                                    <span className="red-text">{errors.lName}</span>
-
-                                    <input
-                                        type="text"
-                                        className="form-control"
+                                        className="form-control green-text"
                                         placeholder="Enter Your Contact"
                                         id="contact"
                                         onChange = {this.handleChange}
                                     />
-                                    <span className="red-text">{errors.contact}</span>
+                                    <span className="red-text">{errors.email}</span>
+
                                     <input
                                         type="email"
-                                        className="form-control"
+                                        className="form-control green-text"
                                         placeholder="Enter Your Email"
                                         id="email"
                                         onChange = {this.handleChange}
                                     />
-                                    <span className="red-text">{errors.email}</span>
+                                    <span className="red-text">{errors.password}</span>
+
                                     <input
                                         type="password"
-                                        className="form-control"
+                                        className="form-control green-text"
                                         placeholder="Enter Your Password"
                                         id="password"
                                         onChange = {this.handleChange}
                                     />
-                                    <span className="red-text">{errors.password}</span>
-                                    <span>Click here for</span><a href ='/login'><i>Login</i></a>
-                                    <button className="btn btngreen">SIGN UP</button>
+                                    <button className="btn btnred">SIGN UP</button>
+                        <span className = "white-text algnRt">Click here for new <a href ="/login"><i>Login</i></a></span>
+                    
                                 </div>
                             </form>
                         </div>
-                    </div>
 
-
+                        </div>
         )
     }
 }

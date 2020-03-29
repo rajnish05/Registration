@@ -4,8 +4,7 @@ const User = require("../Model/userModel")
 exports.userRegisterService = function(payload){
     return new Promise(function (resolve, reject) {
         const newUser = new User({
-            fName:payload.fName,
-            lName:payload.lName,
+            name:payload.name,
             contact:payload.contact,
             email:payload.email,
             password:payload.password

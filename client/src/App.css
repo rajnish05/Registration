@@ -1,6 +1,12 @@
 .custom-container{
-  width:53%;
- float:right;
+  width: 44%;
+  margin:86px 0 0 205px;
+  /* background-color: #eee; */
+}
+.custom-container1{
+  width: 44%;
+  margin:141px 0 0 205px;
+  /* background-color: #eee; */
 }
 .Image  {
   width:600px; 
@@ -11,10 +17,27 @@
   outline: none;
   border-radius: 5px;
 }
-.btngreen{
-  background-color: green;
-  margin-left: 40%;
+.btn:hover{
+  background-color:#0495c9;
+}
+.btnred{
+background-color: red;
+ margin-left: 180px;
+ margin-top: 10px;
+ display: inline;
 }
 .homeContainer{
 padding: 60px 0 0 0;
+}
+.background{
+  background-image: url("/image/img.jpg");
+  height:669px;
+}
+
+.fontSize{
+  font-size: 15px;
+}
+
+.algnRt{
+  float: right;
 }
