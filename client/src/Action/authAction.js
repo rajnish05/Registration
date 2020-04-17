@@ -1,11 +1,11 @@
 const axios = require('axios')
-var baseUrl = "http://localhost:5001"
 
+// This Module is used for user Registration
 export const registerUser = (payload) =>dispatch => {
   return new Promise((resolve, reject) => {
 
     axios
-      .post(baseUrl + "/api/v1/user/register", payload)
+      .post("/api/v1/user/register", payload)
       .then(res => {
         resolve(res);
       })
@@ -16,10 +16,11 @@ export const registerUser = (payload) =>dispatch => {
 };
 
 
+// This Module is used for user Login
 export const loginUser = (payload) => dispatch =>{
   return new Promise((resolve, reject) =>{
     axios
-    .post(baseUrl+ "/api/v1/user/login",payload)
+    .post("/api/v1/user/login",payload)
     .then(res => {
       resolve(res);
     })

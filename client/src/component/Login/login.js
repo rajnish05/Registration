@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { registerValidation } from "../common/validation";
 import { loginUser } from "../../Action/authAction";
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';

@@ -1,6 +1,8 @@
 const _ = require("underscore");
 const Validator = require("validator");
 const isEmpty = require("is-empty");
+
+// This Module Validate Input data for User
 export const registerValidation = (data) =>{
     return new Promise((resolve,reject) =>{
         let errors = {};
@@ -18,31 +20,7 @@ export const registerValidation = (data) =>{
                 reject(errors)
             }
         }
-        // Last Name
-    //     if(data.lName.length == 0){
-    //         formIsValid = false
-    //         errors["lName"] = "last Name is Required !";
-    //         reject(errors)
-    //     } 
-    //     if(data.lName.length>0){
-    //         if(!(data.lName.match(/^[a-zA-Z ]{2,30}$/))){
-    //             errors["name"] = "Provided Name is Invalid";
-    //             reject(errors)
-    //         }
-    //     }
-         //Contact number
-    //   if (data.contact.length == 0) {
-    //     formIsValid = false;
-    //     errors["contact"] = "contact Number is required";
-    //     reject(errors)
-    //  }
-    //  if (data.contact.length > 0) {
-    //     if (!(data.contact.match(/^(?=.*[0-9])[- +()0-9]{6,17}$/))) {
-    //        formIsValid = false;
-    //        errors["contact"] = "Provided contact Number is Invalid";
-    //        reject(errors)
-    //     }
-    //  }
+       
         //Validate Email
         if (Validator.isEmpty(data.email)) {
             formIsValid = false;
