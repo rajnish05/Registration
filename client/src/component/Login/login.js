@@ -46,7 +46,7 @@ class Register extends Component {
                     <div class="row m-b-n">
                         <input
                             type="email"
-                            className="form-control"
+                            className="form-control yellow-text"
                             placeholder="Enter Your Email "
                             id="email"
                             onChange={this.handleChange}
@@ -54,7 +54,7 @@ class Register extends Component {
                         <span className="red-text">{errors.email}</span>
                         <input
                             type="password"
-                            className="form-control "
+                            className="form-control yellow-text"
                             placeholder="Enter Your Password"
                             id="password"
                             onChange={this.handleChange}
@@ -62,7 +62,7 @@ class Register extends Component {
                         <span className="red-text">{errors.password}</span>
 
                         <button className="btn btnred">LOGIN</button>
-                        <span className = "white-text algnRt ">Click here for new <a href ="/"><i>Registration</i></a></span>
+                        <span className = "white-text algnRt ">Click here for new <a className = "yellow-text" href ="/"><i>Registration</i></a></span>
                     </div>
                 </form>
             </div>

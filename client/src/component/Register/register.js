@@ -64,7 +64,7 @@ class Register extends Component {
 
                                     <input
                                         type="text"
-                                        className="form-control green-text"
+                                        className="form-control yellow-text"
                                         placeholder="Enter Your Name"
                                         id="name"
                                          onChange = {this.handleChange}
@@ -72,7 +72,7 @@ class Register extends Component {
                                   
                                     <input
                                         type="text"
-                                        className="form-control green-text"
+                                        className="form-control yellow-text"
                                         placeholder="Enter Your Contact"
                                         id="contact"
                                         onChange = {this.handleChange}
@@ -81,7 +81,7 @@ class Register extends Component {
 
                                     <input
                                         type="email"
-                                        className="form-control green-text"
+                                        className="form-control yellow-text"
                                         placeholder="Enter Your Email"
                                         id="email"
                                         onChange = {this.handleChange}
@@ -90,13 +90,13 @@ class Register extends Component {
 
                                     <input
                                         type="password"
-                                        className="form-control green-text"
+                                        className="form-control yellow-text"
                                         placeholder="Enter Your Password"
                                         id="password"
                                         onChange = {this.handleChange}
                                     />
                                     <button className="btn btnred">SIGN UP</button>
-                        <span className = "white-text algnRt">Click here for new <a href ="/login"><i>Login</i></a></span>
+                        <span className = "white-text algnRt">Click here for new <a className = 'yellow-text' href ="/login"><i>Login</i></a></span>
                     
                                 </div>
                             </form>
